@@ -34,6 +34,8 @@ This repository contains a Python script for downloading all the videos from a Y
 
 ## Usage
 
+### Command Line Interface (CLI)
+
 1. Run the script:
 
    ```
@@ -52,8 +54,38 @@ This repository contains a Python script for downloading all the videos from a Y
 
 7. Once all videos have been downloaded, a success message will be displayed 🎉.
 
+### Graphical User Interface (GUI)
+
+1. Run the executable file `app.exe` from **Windows Executable** (available only for Windows).
+
+2. The GUI window will open.
+
+3. Enter the URL of the YouTube playlist in the provided input field.
+
+4. Click the "Download" button.
+
+5. The script will create a folder with an alphanumeric name based on the playlist title within the **Windows Executable** directory.
+
+6. The script will display the total number of videos in the playlist 🎦.
+
+7. Each video will be downloaded with the highest resolution available and saved in the created folder.
+
+8. The GUI will display the size of each video before downloading 🗜 and provide progress updates.
+
+9. Once all videos have been downloaded, a success message will be displayed 🎉.
+
 ## Known Errors
+
+### CLI
 
 If a folder with the same name as the playlist already exists, the script will throw an error. This is because the script tries to create a new folder with an alphanumeric name based on the playlist title to store the downloaded videos. However, if a folder with the same name already exists, the operating system will not allow the creation of another folder with the same name, resulting in an error.
 
 > To resolve this issue, you can either delete the existing folder or rename it before running the script.
+
+### GUI
+
+In the GUI version, there might be instances where the program appears to be unresponsive or not updating while it's performing the download process. This can happen because the download process might take some time, especially for larger playlists or when downloading videos with high resolutions.
+
+Please be patient and wait for the program to complete its job. Even if it seems unresponsive, it's still working in the background. Avoid clicking or interacting with the program during the download process to ensure a smooth operation.
+
+Once the download process is finished, the program will display a success message, indicating that all the videos have been successfully downloaded.
