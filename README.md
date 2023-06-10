@@ -51,3 +51,9 @@ This repository contains a Python script for downloading all the videos from a Y
 6. The script will display the size of each video before downloading 🗜 and provide progress updates.
 
 7. Once all videos have been downloaded, a success message will be displayed 🎉.
+
+## Known Errors
+
+If a folder with the same name as the playlist already exists, the script will throw an error. This is because the script tries to create a new folder with an alphanumeric name based on the playlist title to store the downloaded videos. However, if a folder with the same name already exists, the operating system will not allow the creation of another folder with the same name, resulting in an error.
+
+> To resolve this issue, you can either delete the existing folder or rename it before running the script.
