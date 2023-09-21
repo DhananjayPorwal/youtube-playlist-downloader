@@ -76,7 +76,9 @@ This repository contains a Python script for downloading all the videos from a Y
 
 9. Once all videos have been downloaded, a success message will be displayed 🎉.
 
-![GUI Screenshot](https://raw.githubusercontent.com/DhananjayPorwal/youtube-playlist-downloader/main/image.png)
+<p align="center" width="100%">
+  <img src="https://raw.githubusercontent.com/DhananjayPorwal/youtube-playlist-downloader/main/image.png" alt="GUI Screenshot" />
+</p>
 
 ## Known Errors
 
