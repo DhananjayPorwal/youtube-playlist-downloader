@@ -1,4 +1,4 @@
-# YouTube Playlist Downloader ✨
+# [YouTube Playlist Downloader ✨](https://github.com/DhananjayPorwal/youtube-playlist-downloader/releases/download/v2.0/youtube-playlist-downloader.zip)
 
 ![youtube-playlist-downloader](https://socialify.git.ci/DhananjayPorwal/youtube-playlist-downloader/image?font=Jost&forks=1&issues=1&language=1&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F09%2FYouTube_full-color_icon_%25282017%2529.svg%2F120px-YouTube_full-color_icon_%25282017%2529.svg.png&name=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Auto)
 
