@@ -6,7 +6,7 @@ def make_alpha_numeric(string):
     return ''.join(char for char in string if char.isalnum())
 
 
-link = input("Enter YouTube Playlist URL: ✨")
+link = input("https://www.youtube.com/watch?v=tJUBmW8D25E&list=PLjGJf_PHTUWOYO8GPOlDh7-0sig4cU_3p")
 
 yt_playlist = Playlist(link)
 
