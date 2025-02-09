@@ -13,13 +13,15 @@ This repository contains a Python project for downloading all the videos from a 
 - **Real-Time Updates:** The GUI provides real-time download progress and error reporting.
 - **Executable Build:** Easily build an executable using PyInstaller.
 
+![Image](image.png)
+
 ## Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/DhananjayPorwal/youtube-playlist-downloader.git
-   ```
+```bash
+git clone https://github.com/DhananjayPorwal/youtube-playlist-downloader.git
+```
 
 2. Change into the project directory:
 
@@ -90,18 +92,18 @@ pyinstaller --onefile app.py
 
 ### CLI
 
-+ Folder Already Exists:
++ **Folder Already Exists**:
 
 If a folder with the same name as the playlist already exists, the script will throw an error because it cannot recreate the folder. To resolve, delete or rename the existing folder before running the script.
 
 ### GUI
 
-+ Unresponsive Behavior:
++ **Unresponsive Behavior**:
 
 The GUI may appear unresponsive during long downloads. This is due to heavy processing in the background thread. Please be patient while the process completes; the GUI logs and final success message indicate completion.
 
 ## Additional Notes
-+ The project now uses yt_dlp for improved compatibility and performance compared to the legacy pytube library.
++ The project now uses `yt_dlp` for improved compatibility and performance compared to the legacy `pytube` library.
 + For cross-platform builds, remember that executables are OS specific. Currently, only the Ubuntu executable is provided (built with PyInstaller on Ubuntu).
 
 ## Resources

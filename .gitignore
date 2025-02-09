@@ -1,0 +1,20 @@
+# Ignore build artifacts
+build/
+dist/
+*.spec
+
+# Ignore virtual environment folder
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other local configuration files (if any)
+.env
+.git
