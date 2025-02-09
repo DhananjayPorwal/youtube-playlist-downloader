@@ -2,96 +2,108 @@
 
 ![youtube-playlist-downloader](https://socialify.git.ci/DhananjayPorwal/youtube-playlist-downloader/image?font=Jost&forks=1&issues=1&language=1&logo=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F09%2FYouTube_full-color_icon_%25282017%2529.svg%2F120px-YouTube_full-color_icon_%25282017%2529.svg.png&name=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Auto)
 
-This repository contains a Python script for downloading all the videos from a YouTube playlist. The script utilizes the `pytube` library to handle the downloading process.
+This repository contains a Python project for downloading all the videos from a YouTube playlist. The project now includes both a Command Line Interface (CLI) and a Graphical User Interface (GUI) built with PyQt5. The original script has been updated to use `yt_dlp` (instead of the outdated `pytube`) to handle the download and conversion process.
 
 ## Features
 
-- Downloads all videos from a given YouTube playlist URL.
-- Converts the playlist name into an alphanumeric folder name.
-- Displays the total number of videos in the playlist 🎦.
-- Downloads each video with the highest resolution available.
-- Displays the size of each video before downloading 🗜.
-- Provides progress updates during the download process.
-- Notifies when all videos have been successfully downloaded 🎉.
+- **Playlist Downloads:** Downloads all videos from a given YouTube playlist URL.
+- **Folder Naming:** Converts the playlist title into an alphanumeric folder name to store downloaded videos.
+- **High Resolution:** Downloads each video with the highest available resolution.
+- **CLI and GUI:** Choose between the CLI version (using `playlist_downloader.py`) or the GUI version (`app.py`) for intuitive operation.
+- **Real-Time Updates:** The GUI provides real-time download progress and error reporting.
+- **Executable Build:** Easily build an executable using PyInstaller.
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
 
-   ```
-   git clone https://github.com/username/repository.git
+   ```bash
+   git clone https://github.com/DhananjayPorwal/youtube-playlist-downloader.git
    ```
 
 2. Change into the project directory:
 
-   ```
-   cd repository
-   ```
+```bash
+cd youtube-playlist-downloader/youtube-playlist-downloader
+```
 
-3. Install the required dependencies:
+3. Set up a virtual environment (recommended):
 
-   ```
-   pip install pytube
-   ```
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+4. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
 ### Command Line Interface (CLI)
 
-1. Run the script:
+1. Run the CLI script:
 
-   ```
-   python playlist_downloader.py
-   ```
+```bash
+python playlist_downloader.py
+```
 
-2. Enter the URL of the YouTube playlist when prompted ✨.
+2. Follow the prompt:
 
-3. The script will create a folder with an alphanumeric name based on the playlist title.
-
-4. The script will display the total number of videos in the playlist 🎦.
-
-5. Each video will be downloaded with the highest resolution available and saved in the created folder.
-
-6. The script will display the size of each video before downloading 🗜 and provide progress updates.
-
-7. Once all videos have been downloaded, a success message will be displayed 🎉.
+   + Enter the YouTube playlist URL when prompted.
+   + The script will create a folder (named by the sanitized playlist title and download all videos into it.
+   + Progress updates and video size details are displayed in the terminal.
 
 ### Graphical User Interface (GUI)
 
-1. Run the executable file `app.exe` from **Windows Executable** (available only for Windows).
+1. Run the GUI application:
 
-2. The GUI window will open.
+```bash
+python app.py
+```
 
-3. Enter the URL of the YouTube playlist in the provided input field.
+2. Using the GUI:
 
-4. Click the "Download" button.
+   + Enter the YouTube playlist URL in the provided input field.
+   + Click the "Download" button.
+   + The GUI displays real-time progress in a log area.
+   + A success message is shown when the process is complete.
 
-5. The script will create a folder with an alphanumeric name based on the playlist title within the **Windows Executable** directory.
+### Creating an Executable
 
-6. The script will display the total number of videos in the playlist 🎦.
+Since I'm on Ubuntu, you can build an executable for your environment as follows:
 
-7. Each video will be downloaded with the highest resolution available and saved in the created folder.
+1. Build the executable with PyInstaller:
 
-8. The GUI will display the size of each video before downloading 🗜 and provide progress updates.
+```bash
+pyinstaller --onefile app.py
+```
 
-9. Once all videos have been downloaded, a success message will be displayed 🎉.
+2. Executable:
 
-<p align="center" width="100%">
-  <img src="https://raw.githubusercontent.com/DhananjayPorwal/youtube-playlist-downloader/main/image.png" alt="GUI Screenshot" />
-</p>
+   + This will generate an executable file in the `dist` folder.
+   + Note: The executable is platform-specific. To create executables for Windows or macOS, you need to build the project on those platforms.
 
 ## Known Errors
 
 ### CLI
 
-If a folder with the same name as the playlist already exists, the script will throw an error. This is because the script tries to create a new folder with an alphanumeric name based on the playlist title to store the downloaded videos. However, if a folder with the same name already exists, the operating system will not allow the creation of another folder with the same name, resulting in an error.
++ Folder Already Exists:
 
-> To resolve this issue, you can either delete the existing folder or rename it before running the script.
+If a folder with the same name as the playlist already exists, the script will throw an error because it cannot recreate the folder. To resolve, delete or rename the existing folder before running the script.
 
 ### GUI
 
-In the GUI version, there might be instances where the program appears to be unresponsive or not updating while it's performing the download process. This can happen because the download process might take some time, especially for larger playlists or when downloading videos with high resolutions.
++ Unresponsive Behavior:
 
-Please be patient and wait for the program to complete its job. Even if it seems unresponsive, it's still working in the background. Avoid clicking or interacting with the program during the download process to ensure a smooth operation.
+The GUI may appear unresponsive during long downloads. This is due to heavy processing in the background thread. Please be patient while the process completes; the GUI logs and final success message indicate completion.
 
-Once the download process is finished, the program will display a success message, indicating that all the videos have been successfully downloaded.
+## Additional Notes
++ The project now uses yt_dlp for improved compatibility and performance compared to the legacy pytube library.
++ For cross-platform builds, remember that executables are OS specific. Currently, only the Ubuntu executable is provided (built with PyInstaller on Ubuntu).
+
+## Resources
++ [yt_dlp Documentation](https://github.com/yt-dlp/yt-dlp)
++ [PyQt5 Documentation](https://www.riverbankcomputing.com/software/pyqt/intro)

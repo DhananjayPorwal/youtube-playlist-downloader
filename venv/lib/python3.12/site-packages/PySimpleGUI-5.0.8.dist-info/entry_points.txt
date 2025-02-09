@@ -1,0 +1,8 @@
+[gui_scripts]
+psghelp = PySimpleGUI.PySimpleGUI:main_sdk_help
+psghome = PySimpleGUI.PySimpleGUI:_main_entry_point
+psgmain = PySimpleGUI.PySimpleGUI:_main_entry_point
+psgupgrade = PySimpleGUI.PySimpleGUI:_upgrade_entry_point
+psgver = PySimpleGUI.PySimpleGUI:main_get_debug_data
+psgwatermarkoff = PySimpleGUI.PySimpleGUI:main_watermark_off
+psgwatermarkon = PySimpleGUI.PySimpleGUI:main_watermark_on
