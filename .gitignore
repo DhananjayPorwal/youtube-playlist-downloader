@@ -16,5 +16,5 @@ __pycache__/
 Thumbs.db
 
 # Other local configuration files (if any)
-.env
+.venv
 .git
