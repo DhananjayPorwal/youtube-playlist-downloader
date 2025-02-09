@@ -13,7 +13,9 @@ This repository contains a Python project for downloading all the videos from a 
 - **Real-Time Updates:** The GUI provides real-time download progress and error reporting.
 - **Executable Build:** Easily build an executable using PyInstaller.
 
-![Image](image.png)
+<p align="center" width="100%">
+  <img src="https://raw.githubusercontent.com/DhananjayPorwal/youtube-playlist-downloader/main/image.png" alt="GUI Screenshot" />
+</p>
 
 ## Installation
 
